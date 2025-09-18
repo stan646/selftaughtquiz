@@ -108,89 +108,89 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
         if (question1.value === 'a') {
             Marks.push(marks.questionMarks);
             container1.innerHTML = 
-            `<div class="alert alert-success alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-            container1.innerHTML = `<div class="alert alert-danger alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
+            container1.innerHTML = `<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
             
         }
         if (question2.value === 'b') {
             Marks.push(marks.questionMarks);
             container2.innerHTML = 
-            `<div class="alert alert-success alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-            container2.innerHTML = `<div class="alert alert-danger alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
+            container2.innerHTML = `<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
             
         }
         if (question3.value === 'a') {
             Marks.push(marks.questionMarks);
             container3.innerHTML = 
-            `<div class="alert alert-success alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
         }else{
-           container3.innerHTML = `<div class="alert alert-danger alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
+           container3.innerHTML = `<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
             
         }
         if (question4.value === 'b') {
             Marks.push(marks.questionMarks);
             container4.innerHTML = 
-            `<div class="alert alert-success alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-            container4.innerHTML = `<div class="alert alert-danger alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
+            container4.innerHTML = `<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
             
         }
         if (question5.value === 'b') {
             Marks.push(marks.questionMarks);
             container5.innerHTML = 
-            `<div class="alert alert-success alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-            container5.innerHTML =`<div class="alert alert-danger alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
+            container5.innerHTML =`<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
             
         }
         if (question6.value === 'a') {
             Marks.push(marks.questionMarks);
             container6.innerHTML = 
-            `<div class="alert alert-success alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-            container6.innerHTML =`<div class="alert alert-danger alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
+            container6.innerHTML =`<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
             
         }
         if (question7.value === 'b') {
             Marks.push(marks.questionMarks);
             container7.innerHTML = 
-            `<div class="alert alert-success alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-            container7.innerHTML =`<div class="alert alert-danger alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
+            container7.innerHTML =`<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
             
         }
         if (question8.value === 'b') {
             Marks.push(marks.questionMarks);
             container8.innerHTML = 
-            `<div class="alert alert-success alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-           container8.innerHTML =  `<div class="alert alert-danger alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
+           container8.innerHTML =  `<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
             
         }
         if (question9.value === 'b') {
             Marks.push(marks.questionMarks);
             container9.innerHTML = 
-            `<div class="alert alert-success alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-            container9.innerHTML = `<div class="alert alert-danger alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
+            container9.innerHTML = `<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
             
         }
         if (question10.value === 'b') {
             Marks.push(marks.questionMarks);
             container10.innerHTML = 
-            `<div class="alert alert-success alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
         }else{
-           container10.innerHTML =  `<div class="alert alert-danger alert-dismissible -75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect!</span></div>`;   
+           container10.innerHTML =  `<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect!</span></div>`;   
         }
 
         //
@@ -209,5 +209,6 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
         
     }
 })
+
 
 
