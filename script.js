@@ -76,7 +76,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
     event.preventDefault();//prevent browser submission
 
     // array for holding marks for each correct question
-    const Marks = [];
+    const Marks = [0];
 
     const unsuccessfulQuestions = [];
 
@@ -235,4 +235,5 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
         alert('Error occur in ' + error.message);
     }
 })
+
 
