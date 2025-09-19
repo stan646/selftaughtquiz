@@ -74,9 +74,16 @@ document.getElementById('prev-btn').addEventListener('click', function(){
 
 document.getElementById('quizForm').addEventListener('submit', function(event){
     event.preventDefault();//prevent browser submission
-    const Marks = []
+
+    // array for holding marks for each correct question
+    const Marks = [];
+
+    const unsuccessfulQuestions = [];
+
+    // object marks and number of incorect question
     const marks = {
-        questionMarks: 2 // Each question carry 2 marks
+        questionMarks: 2, // Each question carry 2 marks
+        wrongquestionTotal: 0
     }
 
     try {
@@ -105,110 +112,126 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
         const container10 = document.getElementById('c-10');
 
         // Validate user answers if is correct or incorect
-        if (question1.value === 'a') {
+        if (question1.value === 'Hyper Text Markup Language') {
             Marks.push(marks.questionMarks);
             container1.innerHTML = 
-            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-            container1.innerHTML = `<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
-            
+            container1.innerHTML = `<div class="alert alert-danger alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span><b>${question1.value}</b> Is incorrect!</span> </div>`;
+            marks.wrongquestionTotal++;
+            unsuccessfulQuestions.push(marks.wrongquestionTotal);
         }
-        if (question2.value === 'b') {
+        // question 2
+        if (question2.value === '<h1>') {
             Marks.push(marks.questionMarks);
             container2.innerHTML = 
-            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-            container2.innerHTML = `<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
-            
+            container2.innerHTML = `<div class="alert alert-danger alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span> <b>${question2.value}</b> Is incorrect!</span> </div>`;
+            marks.wrongquestionTotal++;
+            unsuccessfulQuestions.push(marks.wrongquestionTotal);
+
         }
-        if (question3.value === 'a') {
+        // question 3
+        if (question3.value === '<ul>') {
             Marks.push(marks.questionMarks);
             container3.innerHTML = 
-            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
         }else{
-           container3.innerHTML = `<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
-            
+            container3.innerHTML = `<div class="alert alert-danger alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span> <b>${question3.value}</b> Is incorrect!</span> </div>`;
+            marks.wrongquestionTotal++;
+            unsuccessfulQuestions.push(marks.wrongquestionTotal);
         }
-        if (question4.value === 'b') {
+        // question 4
+        if (question4.value === '<break>') {
             Marks.push(marks.questionMarks);
             container4.innerHTML = 
-            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-            container4.innerHTML = `<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
-            
+            container4.innerHTML = `<div class="alert alert-danger alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span> <b>${question4.value}</b> Is incorrect!</span> </div>`;
+            marks.wrongquestionTotal++;
+            unsuccessfulQuestions.push(marks.wrongquestionTotal);
+
         }
-        if (question5.value === 'b') {
+        // question 5
+        if (question5.value === '<body>') {
             Marks.push(marks.questionMarks);
             container5.innerHTML = 
-            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-            container5.innerHTML =`<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
-            
+            container5.innerHTML =`<div class="alert alert-danger alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span> <b>${question5.value}</b> Is incorrect!</span> </div>`;
+            marks.wrongquestionTotal++;
+            unsuccessfulQuestions.push(marks.wrongquestionTotal);
         }
-        if (question6.value === 'a') {
+        // question 6
+        if (question6.value === "<a href='url'>link text</a>") {
             Marks.push(marks.questionMarks);
             container6.innerHTML = 
-            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-            container6.innerHTML =`<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
-            
+            container6.innerHTML =`<div class="alert alert-danger alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span> <b>${question6.value}</b> Is incorrect!</span> </div>`;
+            marks.wrongquestionTotal++;
+            unsuccessfulQuestions.push(marks.wrongquestionTotal);
         }
-        if (question7.value === 'b') {
+        // question 7
+        if (question7.value === 'alt') {
             Marks.push(marks.questionMarks);
             container7.innerHTML = 
-            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-            container7.innerHTML =`<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
-            
+            container7.innerHTML =`<div class="alert alert-danger alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span> <b>${question7.value}</b> Is incorrect!</span> </div>`;
+            marks.wrongquestionTotal++;
+            unsuccessfulQuestions.push(marks.wrongquestionTotal);
         }
-        if (question8.value === 'b') {
+        // question 8
+        if (question8.value === 'To define a paragraph') {
             Marks.push(marks.questionMarks);
             container8.innerHTML = 
-            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-           container8.innerHTML =  `<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
-            
+            container8.innerHTML =  `<div class="alert alert-danger alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span> <b>${question8.value}</b> Is incorrect!</span> </div>`;
+            marks.wrongquestionTotal++;
+            unsuccessfulQuestions.push(marks.wrongquestionTotal);
         }
-        if (question9.value === 'b') {
+        // question 9
+        if (question9.value === '<title>') {
             Marks.push(marks.questionMarks);
             container9.innerHTML = 
-            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
             
         }else{
-            container9.innerHTML = `<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect</span> </div>`;
-            
+            container9.innerHTML = `<div class="alert alert-danger alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span> <b>${question9.value}</b> Is incorrect!</span> </div>`;
+            marks.wrongquestionTotal++;
+            unsuccessfulQuestions.push(marks.wrongquestionTotal);
         }
-        if (question10.value === 'b') {
+        // question 10
+        if (question10.value === 'No, it s a markup language') {
             Marks.push(marks.questionMarks);
             container10.innerHTML = 
-            `<div class="alert alert-success alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
+            `<div class="alert alert-success alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
         }else{
-           container10.innerHTML =  `<div class="alert alert-danger alert-dismissible w-75 w-sm-50 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Incorrect!</span></div>`;   
+            container10.innerHTML =  `<div class="alert alert-danger alert-dismissible w-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span> <b>${question10.value}</b> Is incorrect!</span></div>`; 
+            marks.wrongquestionTotal++;
+            unsuccessfulQuestions.push(marks.wrongquestionTotal);
         }
 
-        //
+        //reduce marks insed the array to get total by adding to each
         let results = Marks.reduce(totalCalculate);
-        console.log(results);
+        alert(`Total mark ${results}`);
         
-        
-
-        // 
+        // calculate mark each one
         function totalCalculate(ValueA, ValueB){
             return ValueA + ValueB;
         }
         
-
     } catch (error) {
-        
+        alert('Error occur in ' + error.message);
     }
 })
-
-
-
