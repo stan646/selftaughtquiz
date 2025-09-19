@@ -76,14 +76,14 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
     event.preventDefault();//prevent browser submission
 
     // array for holding marks for each correct question
-    const Marks = [];
+    const Marks = [0];
 
-    const unsuccessfulQuestions = [];
+    // const unsuccessfulQuestions = [];
 
     // object marks and number of incorect question
     const marks = {
         questionMarks: 2, // Each question carry 2 marks
-        wrongquestionTotal: 0
+        // wrongquestionTotal: 0
     }
 
     try {
@@ -119,8 +119,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
             
         }else{
             container1.innerHTML = `<div class="alert alert-danger alert-dismissible w-75 w-sm-100 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>incorrect!</span> </div>`;
-            marks.wrongquestionTotal++;
-            unsuccessfulQuestions.push(marks.wrongquestionTotal);
+           
         }
         // question 2
         if (question2.value === '<h1>') {
@@ -130,8 +129,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
             
         }else{
             container2.innerHTML = `<div class="alert alert-danger alert-dismissible w-75 w-sm-100 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>incorrect!</span> </div>`;
-            marks.wrongquestionTotal++;
-            unsuccessfulQuestions.push(marks.wrongquestionTotal);
+            
 
         }
         // question 3
@@ -141,8 +139,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
             `<div class="alert alert-success alert-dismissible w-75 w-sm-100 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
         }else{
             container3.innerHTML = `<div class="alert alert-danger alert-dismissible w-75 w-sm-100 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>incorrect!</span> </div>`;
-            marks.wrongquestionTotal++;
-            unsuccessfulQuestions.push(marks.wrongquestionTotal);
+            
         }
         // question 4
         if (question4.value === '<break>') {
@@ -152,8 +149,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
             
         }else{
             container4.innerHTML = `<div class="alert alert-danger alert-dismissible w-75 w-sm-100 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>incorrect!</span> </div>`;
-            marks.wrongquestionTotal++;
-            unsuccessfulQuestions.push(marks.wrongquestionTotal);
+            
 
         }
         // question 5
@@ -164,8 +160,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
             
         }else{
             container5.innerHTML =`<div class="alert alert-danger alert-dismissible w-75 w-sm-100 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>incorrect!</span> </div>`;
-            marks.wrongquestionTotal++;
-            unsuccessfulQuestions.push(marks.wrongquestionTotal);
+           
         }
         // question 6
         if (question6.value === "<a href='url'>link text</a>") {
@@ -175,8 +170,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
             
         }else{
             container6.innerHTML =`<div class="alert alert-danger alert-dismissible w-75 w-sm-100 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>incorrect!</span> </div>`;
-            marks.wrongquestionTotal++;
-            unsuccessfulQuestions.push(marks.wrongquestionTotal);
+           
         }
         // question 7
         if (question7.value === 'alt') {
@@ -186,8 +180,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
             
         }else{
             container7.innerHTML =`<div class="alert alert-danger alert-dismissible w-75 w-sm-100 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>incorrect!</span> </div>`;
-            marks.wrongquestionTotal++;
-            unsuccessfulQuestions.push(marks.wrongquestionTotal);
+            
         }
         // question 8
         if (question8.value === 'To define a paragraph') {
@@ -197,8 +190,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
             
         }else{
             container8.innerHTML =  `<div class="alert alert-danger alert-dismissible w-75 w-sm-100 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>incorrect!</span> </div>`;
-            marks.wrongquestionTotal++;
-            unsuccessfulQuestions.push(marks.wrongquestionTotal);
+            
         }
         // question 9
         if (question9.value === '<title>') {
@@ -208,8 +200,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
             
         }else{
             container9.innerHTML = `<div class="alert alert-danger alert-dismissible w-75 w-sm-100 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>incorrect!</span> </div>`;
-            marks.wrongquestionTotal++;
-            unsuccessfulQuestions.push(marks.wrongquestionTotal);
+            
         }
         // question 10
         if (question10.value === 'No, it s a markup language') {
@@ -218,8 +209,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
             `<div class="alert alert-success alert-dismissible w-75 w-sm-100 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
         }else{
             container10.innerHTML =  `<div class="alert alert-danger alert-dismissible w-75 w-sm-100 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>incorrect!</span></div>`; 
-            marks.wrongquestionTotal++;
-            unsuccessfulQuestions.push(marks.wrongquestionTotal);
+            
         }
 
         //reduce marks insed the array to get total by adding to each
@@ -237,3 +227,4 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
         
     }
 });
+
