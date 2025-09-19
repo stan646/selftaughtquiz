@@ -76,7 +76,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
     event.preventDefault();//prevent browser submission
 
     // array for holding marks for each correct question
-    const Marks = [0];
+    const Marks = [];
 
     const unsuccessfulQuestions = [];
 
@@ -222,7 +222,7 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
         }
 
         //reduce marks insed the array to get total by adding to each
-        let results = Marks.reduce(totalCalculate);
+        let results = Marks.reduce(totalCalculate,0);
         alert(`Total mark ${results}`);
         
         // calculate mark each one
@@ -234,4 +234,5 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
         console.log(error.message);
     }
 });
+
 
