@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+    crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container bg-light p-3">
+        <h1 class="text-center text-primary">Login</h1>
+    </div>
+
+    <div class="container mt-5 p-3">
+        <form id="login">
+            <label for="" class="form-label">Username</label>
+            <input type="email" name="username" class="form-control w-100 w-sm-100 w-md-25" id="username">
+            <label for="" class="form-label">Password</label>
+            <input type="password" name="password" class="form-control w-100 w-sm-100 w-md-25" id="password">
+            <button type="submit" class="btn btn-success mt-3">Login</button>
+        </form>
+    </div>
+    
+</body>
+</html>
+
+<script>
+document.getElementById('login').addEventListener('submit', function(event1) {
+  event1.preventDefault();
+
+  // login page 
+  const userLogin = {
+    username: 'example@gmail.com',
+    password: '1234'
+  };
+
+  // session
+  sessionStorage.setItem('Login', JSON.stringify(userLogin));
+
+  const x = JSON.parse(sessionStorage.getItem('Login'));
+  console.log(x);
+
+  const user = document.getElementById('username').value;
+  const paswd = document.getElementById('password').value;
+
+  if (user === x.username && paswd === x.password) {
+    window.location.assign('index.html');
+  } else {
+   console.log('invalid login');
+   
+  }
+});
+
+</script>
