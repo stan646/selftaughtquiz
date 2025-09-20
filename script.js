@@ -1,6 +1,6 @@
 // get question from html page (elements in a form of query selector)
 const containerQuestions = document.querySelectorAll('.question');
-
+const toss = document.getElementById('results');
 
 // get total number of questions from the containerQuestions by using next and prev
 let totalQuestions = 0;
@@ -74,7 +74,7 @@ document.getElementById('prev-btn').addEventListener('click', function(){
 
 document.getElementById('quizForm').addEventListener('submit', function(event){
     event.preventDefault();//prevent browser submission
-
+    
     // array for holding marks for each correct question
     const Marks = [];
 
@@ -218,21 +218,24 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
             `<div class="alert alert-success alert-dismissible w-75 w-sm-100 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>Correct! ${marks.questionMarks} Marks.</span> </div>`;
         }else{
             container10.innerHTML =  `<div class="alert alert-danger alert-dismissible w-75 w-sm-100 w-md-25"> <button class="btn-close" data-bs-dismiss="alert"></button><span>incorrect!</span></div>`; 
-            
+            marks.wrongquestionTotal++;
+            unsuccessfulQuestions.push(marks.wrongquestionTotal);
         }
 
-        //reduce marks insed the array to get total by adding to each
-        let results = Marks.reduce(totalCalculate,0);
-        alert(`Total mark ${results}`);
-        
-        // calculate mark each one
-        function totalCalculate(ValueA, ValueB){
-            return ValueA + ValueB;
-        }
-        
+        let totalMark = Marks.reduce((ValueA, ValueB) => ValueA + ValueB);  
+        toss.innerHTML = `You score ${totalMark} Marks.`;  
+
+        snack();
     } catch (error) {
         console.log(error.message);
     }
 });
 
 
+function snack(){
+    toss.className = "show";
+
+    setTimeout(() => {
+        toss.className = toss.className.replaceAll("show", "");
+    }, 3000);
+}     
