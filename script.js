@@ -231,10 +231,9 @@ document.getElementById('quizForm').addEventListener('submit', function(event){
     }
 });
 
-
+// pop up bar for show marks
 function snack(){
     toss.className = "show";
-
     setTimeout(() => {
         toss.className = toss.className.replaceAll("show", "");
     }, 3000);
